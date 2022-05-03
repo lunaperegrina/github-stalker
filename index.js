@@ -1,9 +1,11 @@
 import axios from 'axios';
 import fs from 'fs';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function getForksID(){
     try {
-        const ForksID_gross = await axios.get('https://api.github.com/repos/SHARENERGY-OFICIAL/desafio-sharenergy-2022-01/forks')
+        const ForksID_gross = await axios.get(`https://api.github.com/repos/${process.env.USER_STALKED}/${process.env.REPO_STALKED}/forks`)
         .then((json) =>json.data)
 
         console.log(`Total de forks: ${ForksID_gross.length} \n`);
@@ -18,4 +20,4 @@ async function getForksID(){
     }
 }
 
-getForksID();
+setInterval(getForksID(), 60000);
