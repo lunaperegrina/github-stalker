@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "github-stalker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pedroperegrinaa/github-stalker.git",
+  "author": "pedroperegrinaa <pedrosilva1p333@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
